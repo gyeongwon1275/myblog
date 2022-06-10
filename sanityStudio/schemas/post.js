@@ -38,6 +38,12 @@ export default {
       of: [{ type: 'reference', to: { type: 'tag' } }],
     },
     {
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: { type: 'category' },
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
@@ -56,10 +62,10 @@ export default {
       media: 'mainImage',
     },
     prepare(selection) {
-      const { author } = selection;
+      const { author } = selection
       return Object.assign({}, selection, {
         subtitle: author && `by ${author}`,
-      });
+      })
     },
   },
-};
+}
