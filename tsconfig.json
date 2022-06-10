@@ -17,10 +17,11 @@
       "baseUrl": ".",
       "paths": {
         "@/components/*": ["components/*"],
+        "@/lib/*": ["lib/*"],
         "@/pages/*": ["pages/*"],
         "@/styles/*": ["styles/*"]
       }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types.d.ts", "jest.setup.js", "jest.config.js"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types.d.ts", "jest.setup.js", "jest.config.js", "components/__tests__/Header.test.ㅓsx"],
     "exclude": ["node_modules"]
   }
