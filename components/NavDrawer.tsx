@@ -1,14 +1,15 @@
+import { NavMenu } from '@/lib/api'
 import NavItem from './NavItem'
 
 type NavDrawerProps = {
-  menus: { name: string; href: string }[]
+  navMenus: NavMenu[]
 }
 
-export default function NavDrawer({ menus }: NavDrawerProps): JSX.Element {
+export default function NavDrawer({ navMenus }: NavDrawerProps): JSX.Element {
   return (
     <nav data-testid='NavDrawer' aria-label='main navigation'>
-      {menus.map(({ name, href }) => (
-        <NavItem key={name} name={name} href={href} />
+      {navMenus.map(({ title, href }) => (
+        <NavItem key={title} title={title} href={href} />
       ))}
     </nav>
   )

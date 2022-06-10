@@ -1,15 +1,11 @@
-type NavItemProps = {
-  name: string
-  href: string
-}
-
+import { NavMenu } from '@/lib/api'
 import Link from 'next/link'
 import React from 'react'
 
-export default function NavItem({ name, href }: NavItemProps): JSX.Element {
+export default function NavItem({ title, href }: NavMenu): JSX.Element {
   return (
     <Link href={href}>
-      <a>{name}</a>
+      <a>{title}</a>
     </Link>
   )
 }
